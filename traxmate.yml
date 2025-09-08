@@ -18,4 +18,5 @@ paths:
   uplink-message: /up
   normalized-uplink: /normup
   location-solved: /loc
-  servoce-data: /sd
+  service-data: /sd
+  
