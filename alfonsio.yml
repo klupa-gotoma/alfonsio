@@ -14,7 +14,7 @@ fields:
 
 format: json
 create-downlink-api-key: false
-base-url: https://portal.alfons.io
+base-url: https://portal.alfons.io/
 
 paths:
-  uplink-message: /v3/capture?secret={api_token}
+  uplink-message: thingswebhook?secret={api_token}
