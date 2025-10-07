@@ -1,16 +1,16 @@
 template-id: alnfons.io
 name: alnfons.io
-description: Integrate with Alnfons.io to stream uplink data directly into your IoT analytics portal.
+description: Integrate with Alfons.io to stream uplink data directly into your IoT analytics portal and optionally send downlink messages.
 logo-url: https://raw.githubusercontent.com/klupa-gotoma/alfonsio/master/public/alfonsio-logo.svg
 info-url: https://portal.alfons.io/doc/info.html
 documentation-url: https://portal.alfons.io/doc
 tts-documentation-url: https://www.thethingsindustries.com/docs/integrations/cloud-integrations/alfonsio/
 
 fields:
-  - id: api_token
+  - id: webhook_secret
     type: password
-    label: "API Token"
-    description: "Your unique token from your Alnfons.io account for authenticating uplink data."
+    label: "Webhook Secret"
+    description: "Your unique secret for authenticating Alfons.io uplink data. Provided by Alfons.io when setting up your integration."
 
 format: json
 create-downlink-api-key: false
@@ -18,5 +18,5 @@ create-downlink-api-key: false
 base-url: https://portal.alfons.io/pipeline/taps/stream
 
 paths:
-  uplink-message: /thingsstack/{api_token}
-
+  uplink-message: /thingsstack/{webhook_secret}
+  downlink-message: /thingsstack/{webhook_secret}/downlink
