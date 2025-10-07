@@ -95,13 +95,13 @@
       <h2>Webhook Setup</h2>
       <p>In The Things Stack Console go to <strong>Integrations → Webhooks → Add webhook → Choose “Alfons.io”</strong>, then enter your <code>API Token</code>.</p>
       <p>Webhook endpoint:</p>
-      <pre>https://portal.alfons.io/v3/capture?secret=<em>YOUR_API_TOKEN</em></pre>
+      <pre>https://portal.alfons.io/pipeline/taps/stream/thingsstack/<em>YOUR_API_TOKEN</em></pre>
     </section>
 
     <section>
       <h2>Example Test</h2>
       <p>Send a test uplink to verify connection:</p>
-      <pre>curl -X POST "https://portal.alfons.io/v3/capture?secret=abcd1234" \
+      <pre>curl -X POST "https://portal.alfons.io/pipeline/taps/stream/thingsstack/<em>YOUR_API_TOKEN</em>" \
   -H "Content-Type: application/json" \
   -d '{"dev_id":"device123","payload":"AQID","metadata":{"time":"2025-10-03T08:00:00Z"}}'</pre>
     </section>
